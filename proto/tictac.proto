@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+option go_package="github.con/avirtan/tictacWebGoJs";
+package tictac;
+
+service Game {
+    rpc Connect(connectRequest) returns(connectResponse) {}
+    rpc Stream(Request) returns(stream Response) {}
+    rpc Update(updateRequest) returns(Status) {}
+    rpc StartGame(StartRequest) returns(StartResponse){}
+}
+
+message connectRequest {
+    string name = 1;
+}
+
+message connectResponse {
+    string token = 1;
+    string field = 2;
+    int32 idLobby = 3;
+}
+
+message Request {
+    string token = 1;
+    int32 idLobby = 2;
+}
+
+message Response {
+    string idField = 1;
+    string typeField = 2;
+    string error = 3;
+}
+
+message updateRequest{
+    int32 idField = 1;
+    int32 idLobby = 2;
+    string token = 3;
+}
+
+message Status{
+    string message = 1;
+}
+
+message StartRequest{}
+message StartResponse{
+    bool start = 1;
+}
