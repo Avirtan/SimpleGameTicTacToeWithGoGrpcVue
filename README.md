@@ -1,6 +1,6 @@
-# simple game TIC TAC on Golang(grpc) and Vue, with proxy grpcwebproxy
+# simple game TIC TAC on Golang(grpc),Vue,ThreeJs,with proxy grpcwebproxy
 
-## This simple game create for test gprc with web(Vue)
+## This simple game create for test gprc with web(Vue,ThreeJs)
 
 ## For run
 ```bash
