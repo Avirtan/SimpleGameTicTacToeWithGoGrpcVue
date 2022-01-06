@@ -13,5 +13,5 @@ sh proxy.sh
 #run frontend
 cd frontend
 npm run serve
-# open 2 window in browser and game, logic game not implemented
+# open 2 window in browser and play, logic game not implemented
 ```
